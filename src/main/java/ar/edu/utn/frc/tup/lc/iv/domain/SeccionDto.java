@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DistritoDto {
+public class SeccionDto {
     private Long id;
     private String nombre;
 }

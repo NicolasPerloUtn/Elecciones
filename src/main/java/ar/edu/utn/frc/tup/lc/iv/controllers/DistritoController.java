@@ -31,4 +31,14 @@ public class DistritoController {
     public DistritoCargo getDistritoCargoById(@PathVariable Long id) {
         return distritoService.getDistritoCargo(id);
     }
+
+    @GetMapping("/secciones/{distrito_id}")
+    public List<SeccionDto> getSecciones(@RequestParam Long distrito_id, @RequestParam (required = false) Long seccion_id) {
+        return distritoService.getSecciones(distrito_id, seccion_id);
+    }
+
+    @GetMapping("/resultados/{distrito_id}/{seccion_id}")
+    public ResultadoDto getResultados(@RequestParam Long distrito_id, @RequestParam (required = false) Long seccion_id) {
+        return distritoService.getResultado(distrito_id, seccion_id);
+    }
 }
